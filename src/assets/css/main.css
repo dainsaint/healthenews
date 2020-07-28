@@ -1,0 +1,155 @@
+html, body
+{
+  background: #E5EFF8;
+}
+
+body
+{
+  font-family: 'Gentium Basic', 'Garamond', serif;
+  margin: 0px;
+  color: #111519;
+}
+
+
+
+h4
+{
+  font-family: 'Proxima Nova', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+
+section
+{
+  background: #FFF;
+  margin-bottom: 24px;
+  padding: 48px 12px;
+}
+
+section .content
+{
+  margin: 0px auto;
+  max-width: 720px;
+  padding: 12px;
+}
+
+hr
+{
+  border: none;
+  border-bottom: 1px solid black;
+  margin: 24px 0px;
+}
+
+.all-charts
+{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.charts
+{
+  display: grid;
+  grid-template-rows: 1fr;
+}
+
+
+
+h3
+{
+  margin-top: 0px;
+  font-family: 'Proxima Nova', sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #5781A6;
+}
+
+h5
+{
+  margin: 5px 0px;
+  font-family: 'Proxima Nova', sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.ratings
+{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 24px;
+}
+
+.rating
+{
+  display: flex;
+  padding: 0px;
+  margin: 0px;
+
+}
+
+.main-question
+{
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 50px;
+}
+
+.rating .label
+{
+  font-family: 'Proxima Nova', sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  align-self: center;
+  margin-left: 5px;
+}
+
+.rating .dot
+{
+  width: 20px;
+  background: #E5EFF8;
+  height: 20px;
+  border-radius: 15px;
+  margin-right: 5px;
+}
+
+.rating-1 .label
+{
+  color: #F5555D;
+}
+
+.rating-2 .label, .rating-3 .label
+{
+  color: #FCB257;
+}
+
+.rating-4 .label, .rating-5 .label
+{
+  color: #5BD369;
+}
+
+.rating-1 .dot:nth-of-type(1)
+{
+  background: #F5555D;
+}
+
+.rating-2 .dot:nth-of-type(1),
+.rating-2 .dot:nth-of-type(2),
+.rating-3 .dot:nth-of-type(1),
+.rating-3 .dot:nth-of-type(2),
+.rating-3 .dot:nth-of-type(3)
+{
+  background: #FCB257;
+}
+
+
+.rating-4 .dot:nth-of-type(1),
+.rating-4 .dot:nth-of-type(2),
+.rating-4 .dot:nth-of-type(3),
+.rating-4 .dot:nth-of-type(4),
+.rating-5 .dot
+{
+  background: #5BD369;
+}

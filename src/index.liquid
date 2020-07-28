@@ -1,0 +1,14 @@
+---
+layout: base
+title: Heal The News
+---
+
+<h1>Hey there.</h1>
+
+{% for org in orgs %}
+<li>
+<a href="/{{ org.slug | slug }}/">
+  {{ org.Info.Newsroom }}
+</a>
+</li>
+{% endfor %}

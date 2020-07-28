@@ -1,0 +1,11 @@
+<figure class="rating rating-{{ Rating }}">
+  <div class="dot"></div>
+  <div class="dot"></div>
+  <div class="dot"></div>
+  <div class="dot"></div>
+  <div class="dot"></div>
+  <div class="label">
+    {% assign labels = "n,unacceptable,critical,progress,adequate,satisfactory" | split: ',' %}
+    {{ labels[Rating] }}
+  </div>
+</figure>

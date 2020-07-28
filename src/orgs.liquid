@@ -1,0 +1,78 @@
+---
+layout: base
+title: Test
+pagination:
+  data: orgs
+  size: 1
+  alias: org
+permalink: "{{ org.slug | slug }}/"
+---
+
+
+
+<section id="statement">
+<div class="content">
+<h1>Heal The News</h1>
+<h2>{{ org.Info.Newsroom }}</h2>
+<p class="lede">Sunlight is the best disinfectant</p>
+<p>
+{{ org.Info.Statement }}
+</p>
+<pre>Last Updated: {{ org.Info.Updated }}</pre>
+</div>
+</section>
+
+<section id="links">
+<div class="content">
+<h3>Links</h3>
+{% for Link in org.Links %}
+<li>
+  <a href="{{ Link.URL }}" target="_blank">{{ Link.Title }}</a> ({{ Link.Date }})
+</li>
+{% endfor %}
+</div>
+</section>
+
+{% for Question in org.Questions %}
+<section>
+<div class="content">
+
+<h3>{{ Question.Category }}</h3>
+<p class="main-question">{{ Question.Question }}</p>
+<div class="ratings">
+  <div>
+    <h5>Transparency</h5>
+    {% assign Rating = Question.Transparency %}
+    {% include rating %}
+  </div>
+
+  <div>
+    <h5>Confidence</h5>
+    {% assign Rating = Question.Confidence %}
+    {% include rating %}
+  </div>
+
+</div>
+<p class="assessment">{{ Question.Assessment }}</p>
+
+
+
+
+
+</div>
+</section>
+
+{% endfor %}
+
+
+<section id="representation">
+<div class="content">
+<h3>Representation</h3>
+<div class="all-charts">
+{% for Representation in org.Representation %}
+{% include chart %}
+{% endfor %}
+</div>
+
+</div>
+</section>
