@@ -1,6 +1,0 @@
-{
-"scripts": {
-    "deploy": "gh-pages -d _site"
-},
-"homepage": "/healthenews",
-}
