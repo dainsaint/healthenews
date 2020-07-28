@@ -10,7 +10,14 @@ body
   color: #111519;
 }
 
-
+h1
+{
+  color: #5781A6;
+  font-family: 'Proxima Nova', sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
 
 h4
 {

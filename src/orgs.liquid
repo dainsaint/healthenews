@@ -1,11 +1,12 @@
 ---
 layout: base
-title: Test
 pagination:
   data: orgs
   size: 1
   alias: org
 permalink: "{{ org.slug | slug }}/"
+eleventyComputed:
+  title: "Heal The News – {{ org.Info.Newsroom }}"
 ---
 
 
@@ -15,9 +16,9 @@ permalink: "{{ org.slug | slug }}/"
 <h1>Heal The News</h1>
 <h2>{{ org.Info.Newsroom }}</h2>
 <p class="lede">Sunlight is the best disinfectant</p>
-<p>
-{{ org.Info.Statement }}
-</p>
+
+{{ org.Info.Statement | markdown }}
+
 <pre>Last Updated: {{ org.Info.Updated }}</pre>
 </div>
 </section>
